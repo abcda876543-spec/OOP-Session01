@@ -24,10 +24,21 @@
 
             #region Question 2
             //problems => all fields are public, No validation , the internal state is exposed
-          
+
 
 
             #endregion
-}
+
+            #region Question 3
+
+       
+                DeliveryAddress address = new DeliveryAddress("Cairo", "Nile", 10);
+                Shipment shipment = new Shipment("TR100", "Laptop",5, 50, address );
+                Console.WriteLine(shipment.TrackingCode);
+                Console.WriteLine(shipment.Destination.GetFullAddress());
+                Console.WriteLine(shipment.EstimatedCost);
+
+            #endregion
+    }
     }
 }
