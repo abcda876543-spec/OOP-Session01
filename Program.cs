@@ -21,6 +21,13 @@
             //when a ref type is copied the ref is copied not the object ,
             //2 refs refering to the same object modifying one affects on the other
             #endregion
-        }
+
+            #region Question 2
+            //problems => all fields are public, No validation , the internal state is exposed
+          
+
+
+            #endregion
+}
     }
 }
