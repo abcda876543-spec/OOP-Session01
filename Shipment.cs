@@ -54,6 +54,29 @@ namespace OOP_Session01
             deliveryFee = fee;
             Destination = address;
         }
+
+        public Shipment(string trackingCode)
+    : this(trackingCode, "Unknown", 1, 50,
+          new DeliveryAddress("Unknown", "Unknown", 0))
+        {
+        }
+        public void UpdateDeliveryFee(decimal newFee)
+        {
+            if (newFee > 0)
+            {
+                DeliveryFee = newFee;
+            }
+        }
+
+        public void PrintShipment()
+        {
+            Console.WriteLine($"Tracking Code: {TrackingCode}");
+            Console.WriteLine($"Description: {Description}");
+            Console.WriteLine($"Weight: {Weight}");
+            Console.WriteLine($"Delivery Fee: {DeliveryFee}");
+            Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
+            Console.WriteLine($"Estimated Cost: {EstimatedCost}");
+        }
     }
 
 

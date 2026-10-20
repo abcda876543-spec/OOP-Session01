@@ -1,4 +1,6 @@
-﻿namespace OOP_Session01
+﻿using System.Net;
+
+namespace OOP_Session01
 {
     internal class Program
     {
@@ -31,14 +33,27 @@
 
             #region Question 3
 
-       
-                DeliveryAddress address = new DeliveryAddress("Cairo", "Nile", 10);
-                Shipment shipment = new Shipment("TR100", "Laptop",5, 50, address );
-                Console.WriteLine(shipment.TrackingCode);
-                Console.WriteLine(shipment.Destination.GetFullAddress());
-                Console.WriteLine(shipment.EstimatedCost);
+
+            DeliveryAddress address = new DeliveryAddress("Cairo", "Nile", 10);
+            Shipment shipment = new Shipment("TR100", "Laptop", 5, 50, address);
+            Console.WriteLine(shipment.TrackingCode);
+            Console.WriteLine(shipment.Destination.GetFullAddress());
+            Console.WriteLine(shipment.EstimatedCost);
+
 
             #endregion
-    }
+
+            #region Question 4
+
+            shipment.PrintShipment();
+
+            shipment.UpdateDeliveryFee(100);
+
+
+            shipment.PrintShipment();
+
+            #endregion
+        }
     }
 }
+
